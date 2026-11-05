@@ -40,6 +40,7 @@ setup(
         'console_scripts': [
             'camera_node = arm_camera.camera_node:main',
             'aruco_detector = arm_camera.aruco_detector:main',
+            'calibrate_camera = arm_camera.calibrate_camera:main'
         ],
     },
 )

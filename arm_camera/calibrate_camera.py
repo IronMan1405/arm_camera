@@ -1,3 +1,25 @@
+'''
+to run the calibration script from the package directory:
+python3 arm_camera/calibrate_camera.py \
+    --square-size 0.025
+
+where 0.025 is the side length of a single square in the checkerboard in meters
+i.e., if side length is 25mm then the argument is 0.025
+
+if the board as different dimensions:
+python3 src/arm_camera/arm_camera/calibrate_camera.py \
+    --columns 9 \
+    --rows 6 \
+    --square-size 0.025 \
+    --width 640 \
+    --height 480
+
+the script defaults to writing in config/camera_params.yaml
+
+NOTE: you must run colcon build and source once calibration is done for the new parameters to be taken into effect.
+'''
+
+
 import argparse
 from pathlib import Path
 
